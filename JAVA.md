@@ -1,0 +1,137 @@
+# UT01. INTRODUCCIÓN
+
+## Objetivos
+
+- Describir las características del lenguaje de programación Java.
+- Describir las herramientas ligadas a la construcción y ejecución de programas escritos en Java.
+- Construir las primeras aplicaciones en Java.
+
+Esta unidad de trabajo pretende ser una rápida introducción a la programación en Java. En primer lugar muestra lo que es Java, sus características y las herramientas que están ligadas a él y, a continuación, enseña cómo compilar y ejecutar algunos programas sencillos escritos en Java. La tecnología Java es tanto una plataforma como un lenguaje de programación. En los capítulos posteriores se trata de dar una visión más detallada de la sintaxis del lenguaje de programación Java.
+
+## Introducción
+
+### El Lenguaje de Programación Java
+
+El lenguaje de programación Java, fue diseñado por la compañía **Sun Microsystems Inc**, con
+el propósito de crear un lenguaje que pudiera funcionar en sistemas de ordenadores heterogéneos (redes de computadoras formadas por más de un tipo de ordenador, ya sean PC compatibles, Macintosh o estaciones de trabajo que empleen diferentes sistemas operativos como Windows, OS/2 o Unix), y que fuera independiente de la plataforma en la que se vaya a ejecutar. Esto significa que un programa de Java puede ejecutarse en cualquier máquina o plataforma.
+
+Su origen se remonta a la creación de un lenguaje de programación para el desarrollo de
+aplicaciones para electrodomésticos y otros aparatos electrónicos de consumo por parte de una empresa filial de _Sun_, llamada FirstPerson en 1991. Su creador, **James Gosling**, lo bautizó como Oak. Al abandonarse este proyecto, el lenguaje se modificó, al igual que su nombre y se orientó al desarrollo de aplicaciones para la red. En septiembre de 1995 aparece el primer Kit de Desarrollo de Java (JDK). A principios de 1997 se presenta la primera revisión de Java (la versión 1.1) y a finales de 1998 surge la versión 1.2 (Java 2) que introdujo modificaciones bastante significativos. En octubre de 2004 se hace pública la versión Java 1.5 (Java 5) incluyendo innovaciones muy importantes en la plataforma.
+
+En la siguiente tabla se muestra el histórico de _versiones de Java_:
+
+| Versión   | Fecha de Lanzamiento     | Comentario                                                                                                                                                                                                                                           |
+| --------- | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| JDK 1.0   | 23 de enero de 1996      | Primera versión.                                                                                                                                                                                                                                     |
+| JDK 1.1   | 19 de febrero de 1997    | Se da a conocer la nueva versión de Java Card, orientado a pequeñas tarjetas inteligentes.                                                                                                                                                           |
+| J2SE 1.2  | 8 de diciembre de 1998   | Se modificó el nombres bajo la denominación Java 2 y el nombre "J2SE" (Java 2 Platform, Standard Edition), reemplazó a JDK para distinguir la plataforma base de J2EE (Java 2 Platform, Enterprise Edition) y J2ME (Java 2 Platform, Micro Edition). |
+| J2SE 1.3  | 8 de mayo de 2000        | Se incorporan nuevas utilidades de red y comienzan a incluirse características multimedia.                                                                                                                                                           |
+| J2SE 1.4  | 6 de febrero de 2002     | &nbsp;                                                                                                                                                                                                                                               |
+| J2SE 5    | 30 de septiembre de 2004 | Originalmente numerado 1.5, esta notación aún es usada internamente.                                                                                                                                                                                 |
+| Java SE 6 | 11 de diciembre de 2006  | En esta versión, Sun cambió el nombre "J2SE" por Java SE.                                                                                                                                                                                            |
+| Java SE 7 | julio de 2011            | Se simplifican algunas características del lenguaje. También ofrece un mayour soporte a los emergentes lenguajes scripting ejecutados sobre la máquina virtual.                                                                                      |
+| Java SE 8 | marzo de 2014            | Nuevas utilidades del lenguaje, destacan las expresiones lambda y las nuevas APIs para manipular fechas y colecciones de objetos.                                                                                                                    |
+| Java SE 9 | 26 de septiembre de 2017 | &nbsp;                                                                                                                                                                                                                                               |
+
+> **Nota**: Cada 3 ó 4 años sale una versión de Java. La versión actual _Java SE 9_ es muy reciente: la más utilizada actualmente es **Java SE 8**.
+
+En 2009 Oracle adquiere Sun Microsystems por un valor de 5710 millones de dólares.
+
+### Características del Lenguaje Java
+
+El lenguaje Java muestra las siguientes características generales:
+
+- **Sencillo**: Elimina la complejidad de los lenguajes como C y da paso al contexto de los
+  lenguajes modernos orientados a objetos. Aunque la sintaxis de Java es muy similar a C y
+  C++, que son lenguajes a los que una gran mayoría de programadores están acostumbrados a
+  emplear.
+
+- **Orientado a Objetos**: La filosofía de programación orientada a objetos es diferente a la
+  programación convencional (imperativa o procedural). Su nivel de abstracción facilita la
+  creación y mantenimiento de programas. Existen muchas referencias que dan una
+  introducción a esta forma de programar.
+
+- **Independiente a la arquitectura y portable**: Al compilar un programa en Java, el código
+  resultante es un tipo de código binario conocido como Java bytecodes. Este código es interpretado por
+  diferentes computadoras de igual manera, por lo que únicamente hay que
+  implementar un intérprete para cada plataforma. De esa manera Java logra ser un lenguaje
+  que no depende de una arquitectura de ordenador específica. Como el código compilado de
+  Java es interpretado, un programa compilado de Java puede ser utilizado por cualquier
+  computadora que tenga implementado el intérprete de Java.
+
+- **Robusto**: Java simplifica la gestión de la memoria dinámica. Por ejemplo, ya no es necesario
+  la liberación explícita, el intérprete de Java lo lleva acabo automáticamente cuando detecta
+  que una variable dinámica ya no es usada por el programa. Por otra parte, impide que un
+  puntero Java apunte a una dirección de memoria no válida, los punteros (referencias) Java
+  son seguros y deterministas: o bien apuntan a un elemento correctamente alojado en memoria
+  o bien tienen el valor nulo. Finalmente el acceso a la memoria es supervisado por el intérprete
+  de tal manera que no es posible acceder a zonas de memoria no autorizadas sin provocar un
+  error. Por ejemplo, no es posible escribir fuera de los límites de un vector.
+
+- **Seguro**: El sistema de Java tiene ciertas políticas que evitan que se puedan codificar virus con
+  este lenguaje. Existen muchas restricciones, especialmente para los denominados applets, que
+  limitan lo que se puede y no puede hacer con los recursos críticos de una computadora.
+
+- **Multitarea (Multithreaded)**: Un lenguaje que soporta múltiples threads, hilos o tareas, es un
+  lenguaje que puede ejecutar diferentes líneas de código al mismo tiempo. El soporte y la
+  programación de hilos en Java está integrado en la propia sintaxis del lenguaje.
+
+- **Dinámico**: En Java no es necesario cargar completamente el programa en memoria sino que
+  las clases compiladas pueden ser cargadas bajo demanda en tiempo de ejecución (dynamic
+  binding). Esto proceso permite la carga de código bajo demanda, lo que es especialmente
+  importante en los applets.
+
+### Mecanismo de Creación de un Programa Java
+
+En este aspecto la principal originalidad de Java estriba en que es a la vez **compilado** e
+**interpretado**. Con el compilador de Java, el programa fuente (fichero con extensión _.java_) es traducido a un lenguaje intermedio o pseudo-código (no es código máquina) llamado **Java bytecodes** generándose un programa compilado almacenado en un archivo con extensión **.class** . Este archivo puede ser posteriormente interpretado y ejecutado por el intérprete de Java (lo que se conoce como la Máquina Virtual Java o Java Virtual Machine). Por eso Java es multi-plataforma, ya que existe un intérprete para cada máquina diferente. Por tanto, la compilación se produce una vez y la interpretación cada vez que el programa se ejecuta.
+
+![img_01][img_01]
+
+Actualmente las máquinas virtuales modernas realizan una compilación JIT (Just In Time) en
+donde el bytecode no es interpretado sino que se compila directamente a código máquina en tiempo de ejecución de acuerdo con la arquitectura (procesador y sistema operativo) en la que se ejecuta la máquina virtual. Esto permite conseguir velocidades de ejecución similares al C. En la práctica las máquinas virtuales suelen utilizar técnicas mixtas de interpretación/compilación JIT normalmente según la frecuencia de paso por un bytecode concreto.
+
+Un programa Java puede funcionar como una aplicación independiente (por ejemplo, el
+entorno de desarrollo NetBeans) o como un applet (contracción de la expresión little application), que es un pequeño programa que no se ejecuta de forma independiente. Los applets de Java se pueden introducir o incrustar en una página de Web (empleando el lenguaje HTML), y con esto se puede tener un programa que puede ser ejecutado por cualquier persona que tenga un navegador compatible con Java. Aunque queda fuera del alcance de este manual, es necesario indicar que también pueden construirse un tercer tipo de aplicaciones: los denominados servlets (contracción de la expresión server application), que se ejecutarían en servidores web conectados a intranets o a internet.
+
+### Ventajas en el Uso de Java
+
+Pueden destacarse las siguientes ventajas en el empleo de Java como lenguaje de
+programación:
+
+- **Compatibilidad**: No es necesario modificar (reescribir) el código si se desea ejecutar el programa en otra máquina. Un único código funciona para todos los navegadores
+  compatibles con Java o donde se tenga una Máquina Virtual de Java (ordenadores PC
+  compatibles, Macintosh o estaciones de trabajo que empleen diferentes sistemas operativos
+  como Windows, Mac OS X, Linux o Unix).
+
+- **Funcionalidad**: Si interesa desarrollar un servicio Web con funciones dinámicas más allá de las posibilidades del lenguaje HTML, puede emplearse Java para incluir en las páginas toda clase de elementos multimedia y permitir un alto nivel de interactividad.
+
+- **Ahorro de recursos**: Un navegador compatible con Java deberá ejecutar cualquier programa hecho en Java, esto ahorra a los usuarios tener que estar insertando programas adicionales o plug-ins que necesitan emplear memoria adicional y espacio en disco.
+
+- **Metodología OO**: Java es un lenguaje de programación orientado a objetos, y tiene todos los beneficios que ofrece esta metodología de programación: facilita la creación, el
+  mantenimiento y la reutilización de código.
+
+- **Menos y mejor código**: Comparaciones de métricas de programas indican que un programa
+  en escrito en Java es cuatro veces de menor tamaño que uno escrito en C++ y además
+  favorece los buenos hábitos en la programación como, por ejemplo, la gestión de la memoria
+  dinámica.
+
+- **Gratuidad**: El kit de desarrollo Java es gratuito y puede descargarse de diversos servidores WWW.
+
+### Inconvenientes del Lenguaje Java
+
+El uso de Java también tiene algunos inconvenientes o limitaciones:
+
+- **Mayor consumo memoria**: un programa Java consume más memoria por dos razones, es
+  necesario cargar la máquina virtual y, en general, Java necesita más memoria para alojar los
+  elementos de un programa que un programa similar hecho en un lenguaje nativo.
+
+- **Mayor tiempo de carga**: la carga de la máquina virtual lleva tiempo y como la carga de las clases son bajo demanda la ejecución al principio de un programa Java es relativamente lenta.
+
+- **Integración no perfecta con el sistema operativo**: como Java y sus librerías están
+  diseñados para ser multiplataforma la integración con el sistema operativo en forma de
+  extensiones al mismo no es sencilla y suele necesitar extensiones nativas que rompen la
+  portabilidad. Por otro lado exigen la presencia y carga de la máquina virtual por lo que no se suele utilizar como lenguaje para el desarrollo de elementos básicos de sistemas.
+
+- **Es un lenguaje de programación**: El hecho de que Java sea un lenguaje de programación es otra gran limitación. Aunque sea orientado a objetos y “más sencillo” de aprender que C o
+  C++, sigue siendo un lenguaje y por lo tanto aprenderlo no es tarea fácil. Especialmente para los programadores noveles.
