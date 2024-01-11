@@ -86,8 +86,6 @@ El lenguaje Java muestra las siguientes características generales:
 En este aspecto la principal originalidad de Java estriba en que es a la vez **compilado** e
 **interpretado**. Con el compilador de Java, el programa fuente (fichero con extensión _.java_) es traducido a un lenguaje intermedio o pseudo-código (no es código máquina) llamado **Java bytecodes** generándose un programa compilado almacenado en un archivo con extensión **.class** . Este archivo puede ser posteriormente interpretado y ejecutado por el intérprete de Java (lo que se conoce como la Máquina Virtual Java o Java Virtual Machine). Por eso Java es multi-plataforma, ya que existe un intérprete para cada máquina diferente. Por tanto, la compilación se produce una vez y la interpretación cada vez que el programa se ejecuta.
 
-![img_01][img_01]
-
 Actualmente las máquinas virtuales modernas realizan una compilación JIT (Just In Time) en
 donde el bytecode no es interpretado sino que se compila directamente a código máquina en tiempo de ejecución de acuerdo con la arquitectura (procesador y sistema operativo) en la que se ejecuta la máquina virtual. Esto permite conseguir velocidades de ejecución similares al C. En la práctica las máquinas virtuales suelen utilizar técnicas mixtas de interpretación/compilación JIT normalmente según la frecuencia de paso por un bytecode concreto.
 
@@ -135,3 +133,69 @@ El uso de Java también tiene algunos inconvenientes o limitaciones:
 
 - **Es un lenguaje de programación**: El hecho de que Java sea un lenguaje de programación es otra gran limitación. Aunque sea orientado a objetos y “más sencillo” de aprender que C o
   C++, sigue siendo un lenguaje y por lo tanto aprenderlo no es tarea fácil. Especialmente para los programadores noveles.
+
+  ### La plataforma Java
+
+Normalmente, una **plataforma** es un sistema mixto que incluye el hardware y/o el entorno
+software en el que se ejecuta un programa. **La plataforma Java** se diferencia de la mayoría de las demás en que está formada únicamente por software que se ejecuta en cualquier otra plataforma independiente de hardware. La _plataforma Java_ tiene dos componentes:
+
+- El intérprete, Máquina Virtual Java ó Java Virtual Machine (Java VM) que ya se ha
+  comentado anteriormente.
+- La Interfaz de Programación de Aplicaciones Java ó Java Application Programming
+  Interface (Java API).
+
+El **API de Java** es una amplia colección de componentes de software que facilitan muchas
+necesidades de programación como puede ser código necesario para construir una interfaz de
+usuario (GUI). El API de Java se agrupa en **librerías** o **paquetes** (packages) de componentes relacionados entre sí: componentes básicos de programación, creación de applets, redes, internacionalización, seguridad, componentes de software, conectividad y redes, etcétera. Hay, además, extensiones estándar fuera del núcleo del API de Java que facilitan recursos para servidores, gráficos 3D, animación…
+
+## Herramientas de Desarrollo para JAVA
+
+### Java SE
+
+Para poder trabajar con Java en nuestro equipo necesitamos uno de los siguientes paquetes:
+
+- JRE (Java Runtime Environment).
+- Servidor JRE (Server Java Runtime Environment).
+- JDK (Java Development Kit).
+
+Estos paquetes tienen distintas finalidades, en función de las tareas que vayamos a realizar.
+
+#### ¿Qué paquete Java necesito?
+
+- **Desarrolladores de software**: _JDK (Java SE Development Kit)_ Para desarrolladores de Java. Incluye un JRE completo más herramientas para desarrollar, compilar, depurar y monitorizar aplicaciones Java.
+- **Administradores que ejecutan aplicaciones en un servidor**: _Servidor JRE (Server Java Runtime Environment)_ Para desplegar aplicaciones Java en servidores. Incluye herramientas para el monitoreo de JVM y herramientas comúnmente requeridas para aplicaciones de servidor, pero no incluye integración de navegador (el complemento de Java), actualización automática ni un instalador. Lea más aquí (en ingles) arrow
+- **Usuario final que ejecuta Java en un escritorio**: _JRE (Java Runtime Environment)_: Cubre la mayoría de las necesidades de los usuarios finales. Contiene todo lo necesario para ejecutar aplicaciones Java en su sistema.
+
+Página oficial de Java SE: [http://www.oracle.com/technetwork/es/java/javase/downloads/index.html](http://www.oracle.com/technetwork/es/java/javase/downloads/index.html)
+
+### Entornos de Desarrollo Integrado
+
+Utilizando las herramientas incluidas en el propio _JDK_ podemos compilar programas, empaquetarlos, depurarlos y ejecutarlos. Además, necesitaríamos un editor de texto para escribir el código fuente.
+
+Un **IDE (Integrated Development Environment)** nos permite realizar todas estas tareas en un único entorno de desarrollo.
+
+> **Nota**: Un **IDE** consiste de un editor de código fuente, herramientas de construcción automáticas y un depurador. La mayoría de los IDE tienen auto-completado inteligente de código. Algunos IDE contienen un compilador, un intérprete, o ambos, tales como NetBeans y Eclipse; otros no, tales como SharpDevelop y Lazarus.
+
+Existen multitud de IDEs para Java, entre los más importantes se encuentran **Eclipse**, **Intellij Idea** y **Netbeans**.
+
+#### NetBeans
+
+Inicialmente desarrollado por _Sun_ y ahora en manos de _Oracle_, **NetBeans** es uno de los IDE para desarrollo Java más completos. _NetBeans_ tiene una estructura modular fácilmente ampliable mediante complementos, existiendo configuraciones predefinidas para desarrollo Java SE, Java EE y también dirigidas a otros lenguajes de programación, como PHP o C++.
+
+_NetBeans_ es un proyecto de código abierto, está desarrollado en Java y, en consecuencia, puede instalarse en cualquier sistema para el que exista un JRE de Java SE, incluidos Windows, GNU/Linux y OS X/MacOS. Al tratarse de una herramienta de _Oracle_, suele ser la primera en incorporar soporte para las novedades que van apareciendo en la plataforma Java. Por ejemplo, desde la versión 8.1 de NetBeans cuenta con soporte para Java SE 9, es decir, desde antes de que esta versión de la plataforma saliera al mercado.
+
+Página oficial de Eclipse: [https://netbeans.org/](https://netbeans.org/)
+
+#### Eclipse
+
+Al igual que _NetBeans_, **Eclipse** también es un proyecto de código abierto y el IDE está disponible para múltiples sistemas operativos. _Eclipse_ es un IDE no sólo para Java, sino para muchos otros lenguajes y herramientas de desarrollo. Es considerado por muchos el IDE por excelencia, al incorporar un gran abanico de complementos que facilitan prácticamente todas las tareas relativas al desarrollo de software.
+
+Página oficial de Eclipse: [https://www.eclipse.org](https://www.eclipse.org)
+
+#### Intellij Idea
+
+**IntelliJ IDEA** es un IDE para Java desarrollado por la empresa _JetBrains_, estando disponible para Windows, OS X/MacOS y GNU/Linux. Como ocurre con _NetBeans_ y _Eclipse_, también puede incorporar soporte para otros lenguajes de programación. A diferencia de ellos, sin embargo, no se trata de un proyecto totalmente basado en software libre, sino de un producto comercial. Existe, no obstante, una edición reducida denominada Community que puede obtenerse gratuitamente.
+
+Este IDE es valorado especialmente por su agilidad y estabilidad, así como por contar con una interfaz de usuario considerada más actual y funcional que la de _NetBeans_ o _Eclipse_. El mayor inconveniente estriba en que para ciertos tipos de proyecto se necesita la edición Ultimate que tiene un coste relativamente elevado.
+
+Página oficial de Intellij Idea: [https://www.jetbrains.com/idea](https://www.jetbrains.com/idea)
