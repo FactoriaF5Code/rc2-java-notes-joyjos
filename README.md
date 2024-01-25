@@ -21,6 +21,6 @@ Java es un lenguaje versátil y ampliamente utilizado en el desarrollo de softwa
 
 ### [UT09. Interfaces](Apuntes/UT09.%20Interfaces.md)
 
-### [UT10. Colecciones y Diccionaros](Apuntes/UT10.%20Colecciones%20y%20Diccionarios.md)
+### [UT10. Colecciones y Diccionarios](Apuntes/UT10.%20Colecciones%20y%20Diccionarios.md)
 
 ### [UT11. Ficheros de texto](Apuntes/UT11.%20Ficheros%20de%20texto.md)
